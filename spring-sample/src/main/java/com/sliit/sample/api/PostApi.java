@@ -32,4 +32,12 @@ public class PostApi {
         return posts.remove(id);
     }
 
+    public Post updatePost(Post post){
+       Post oldPost =  posts.get(post.getId());
+       oldPost.setName(post.getName());
+       oldPost.setDescription(post.getDescription());
+       posts.put(oldPost.getId(),oldPost);
+       return oldPost;
+    }
+
 }

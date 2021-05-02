@@ -46,4 +46,10 @@ public class PostEndpoint {  //or Post controller if you like
     public Post deletePost(@PathVariable String id){
         return postApi.removePost(id);
     }
+
+    @PutMapping
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public Post putPost(@RequestBody Post post){
+        return postApi.updatePost(post);
+    }
 }
