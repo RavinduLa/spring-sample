@@ -43,7 +43,7 @@ public class PostEndpoint {  //or Post controller if you like
 
     @DeleteMapping(value = "{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public Post deletePost(@PathVariable String id){
+    public String deletePost(@PathVariable String id){  //prev returned Post type
         return postApi.removePost(id);
     }
 
